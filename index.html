@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>Image Gallery | Explore Moments</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="container navbar">
+        <!-- Logo -->
+        <a href="#" class="logo"> <span>✦</span> Visual Gallery </a>
+
+        <!-- Theme Button -->
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="hero-tag">DISCOVER • EXPLORE • INSPIRE</p>
+
+        <h1>
+          Explore Beautiful
+          <span>Moments</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover a curated collection of nature, travel, animals, architecture
+          and food photography.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <div class="container">
+        <!-- ================= SEARCH ================= -->
+        <div class="search-container">
+          <div class="search-box">
+            <span class="search-icon">⌕</span>
+
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search images..."
+              autocomplete="off"
+            />
+
+            <button
+              class="clear-search"
+              id="clearSearch"
+              aria-label="Clear search"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= FILTER BUTTONS ================= -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-category="all">All</button>
+
+          <button class="filter-btn" data-category="nature">🌿 Nature</button>
+
+          <button class="filter-btn" data-category="travel">✈️ Travel</button>
+
+          <button class="filter-btn" data-category="animals">🐾 Animals</button>
+
+          <button class="filter-btn" data-category="architecture">
+            🏛️ Architecture
+          </button>
+
+          <button class="filter-btn" data-category="food">🍜 Food</button>
+
+          <button class="filter-btn" data-category="favorites">
+            ❤️ Favorites
+          </button>
+        </div>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="gallery-section">
+          <div class="gallery-header">
+            <div>
+              <h2>Our Collection</h2>
+
+              <p>
+                <span id="imageCount">15</span>
+                images found
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="gallery" id="gallery">
+            <!-- ========== NATURE ========== -->
+
+            <article
+              class="gallery-item"
+              data-category="nature"
+              data-title="Mountain Sunrise"
+              data-description="A beautiful sunrise over the mountains."
+            >
+              <img
+                src="images/nature-1.jpg"
+                alt="Mountain Sunrise"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Nature </span>
+
+                  <h3>Mountain Sunrise</h3>
+
+                  <button class="view-btn" data-index="0">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="0"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="nature"
+              data-title="Forest Path"
+              data-description="A peaceful path surrounded by green forest."
+            >
+              <img src="images/nature-2.jpg" alt="Forest Path" loading="lazy" />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Nature </span>
+
+                  <h3>Forest Path</h3>
+
+                  <button class="view-btn" data-index="1">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="1"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="nature"
+              data-title="Ocean Waves"
+              data-description="Calm ocean waves meeting the shore."
+            >
+              <img src="images/nature-3.jpg" alt="Ocean Waves" loading="lazy" />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Nature </span>
+
+                  <h3>Ocean Waves</h3>
+
+                  <button class="view-btn" data-index="2">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="2"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <!-- ========== TRAVEL ========== -->
+
+            <article
+              class="gallery-item"
+              data-category="travel"
+              data-title="Beautiful Destination"
+              data-description="A stunning destination waiting to be explored."
+            >
+              <img
+                src="images/travel-1.jpg"
+                alt="Beautiful Travel Destination"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Travel </span>
+
+                  <h3>Beautiful Destination</h3>
+
+                  <button class="view-btn" data-index="3">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="3"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="travel"
+              data-title="City Adventure"
+              data-description="Exploring a beautiful city and its streets."
+            >
+              <img
+                src="images/travel-2.jpg"
+                alt="City Adventure"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Travel </span>
+
+                  <h3>City Adventure</h3>
+
+                  <button class="view-btn" data-index="4">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="4"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="travel"
+              data-title="Mountain Journey"
+              data-description="A peaceful journey through the mountains."
+            >
+              <img
+                src="images/travel-3.jpg"
+                alt="Mountain Journey"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Travel </span>
+
+                  <h3>Mountain Journey</h3>
+
+                  <button class="view-btn" data-index="5">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="5"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <!-- ========== ANIMALS ========== -->
+
+            <article
+              class="gallery-item"
+              data-category="animals"
+              data-title="Wild Tiger"
+              data-description="A powerful tiger in its natural habitat."
+            >
+              <img src="images/animals-1.jpg" alt="Wild Tiger" loading="lazy" />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Animals </span>
+
+                  <h3>Wild Tiger</h3>
+
+                  <button class="view-btn" data-index="6">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="6"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="animals"
+              data-title="Beautiful Bird"
+              data-description="A colorful bird resting in nature."
+            >
+              <img
+                src="images/animals-2.jpg"
+                alt="Beautiful Bird"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Animals </span>
+
+                  <h3>Beautiful Bird</h3>
+
+                  <button class="view-btn" data-index="7">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="7"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="animals"
+              data-title="Cute Wildlife"
+              data-description="A beautiful wildlife moment captured in nature."
+            >
+              <img
+                src="images/animals-3.jpg"
+                alt="Cute Wildlife"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Animals </span>
+
+                  <h3>Cute Wildlife</h3>
+
+                  <button class="view-btn" data-index="8">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="8"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <!-- ========== ARCHITECTURE ========== -->
+
+            <article
+              class="gallery-item"
+              data-category="architecture"
+              data-title="Modern Architecture"
+              data-description="A beautiful example of modern architecture."
+            >
+              <img
+                src="images/architecture-1.jpg"
+                alt="Modern Architecture"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Architecture </span>
+
+                  <h3>Modern Architecture</h3>
+
+                  <button class="view-btn" data-index="9">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="9"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="architecture"
+              data-title="Historic Building"
+              data-description="A historic building with beautiful details."
+            >
+              <img
+                src="images/architecture-2.jpg"
+                alt="Historic Building"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Architecture </span>
+
+                  <h3>Historic Building</h3>
+
+                  <button class="view-btn" data-index="10">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="10"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="architecture"
+              data-title="City Skyline"
+              data-description="A beautiful city skyline at sunset."
+            >
+              <img
+                src="images/architecture-3.jpg"
+                alt="City Skyline"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Architecture </span>
+
+                  <h3>City Skyline</h3>
+
+                  <button class="view-btn" data-index="11">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="11"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <!-- ========== FOOD ========== -->
+
+            <article
+              class="gallery-item"
+              data-category="food"
+              data-title="Fresh Breakfast"
+              data-description="A delicious and colorful breakfast."
+            >
+              <img
+                src="images/food-1.jpg"
+                alt="Fresh Breakfast"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Food </span>
+
+                  <h3>Fresh Breakfast</h3>
+
+                  <button class="view-btn" data-index="12">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="12"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="food"
+              data-title="Delicious Dessert"
+              data-description="A delicious dessert beautifully presented."
+            >
+              <img
+                src="images/food-2.jpg"
+                alt="Delicious Dessert"
+                loading="lazy"
+              />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Food </span>
+
+                  <h3>Delicious Dessert</h3>
+
+                  <button class="view-btn" data-index="13">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="13"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="gallery-item"
+              data-category="food"
+              data-title="Healthy Food"
+              data-description="A fresh and healthy food collection."
+            >
+              <img src="images/food-3.jpg" alt="Healthy Food" loading="lazy" />
+
+              <div class="image-overlay">
+                <div class="image-info">
+                  <span class="category-label"> Food </span>
+
+                  <h3>Healthy Food</h3>
+
+                  <button class="view-btn" data-index="14">View Image ↗</button>
+                </div>
+
+                <button
+                  class="favorite-btn"
+                  data-index="14"
+                  aria-label="Add to favorites"
+                >
+                  ♡
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- No Results -->
+          <div class="no-results" id="noResults">
+            <div class="no-results-icon">🔍</div>
+
+            <h3>No images found</h3>
+
+            <p>Try another search or category.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-overlay" id="lightboxOverlay"></div>
+
+      <div class="lightbox-content">
+        <!-- Close -->
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          aria-label="Close image"
+        >
+          ×
+        </button>
+
+        <!-- Previous -->
+        <button
+          class="lightbox-nav prev-btn"
+          id="prevBtn"
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+
+        <!-- Image -->
+        <div class="lightbox-image-container">
+          <img src="" alt="" id="lightboxImage" />
+
+          <div class="lightbox-details">
+            <span class="lightbox-category" id="lightboxCategory">
+              Nature
+            </span>
+
+            <h2 id="lightboxTitle">Image Title</h2>
+
+            <p id="lightboxDescription">Image description</p>
+          </div>
+        </div>
+
+        <!-- Next -->
+        <button
+          class="lightbox-nav next-btn"
+          id="nextBtn"
+          aria-label="Next image"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Visual Gallery. Crafted with HTML, CSS & JavaScript.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
